@@ -74,9 +74,14 @@ namespace traveling_salesman_problem
         {
             if(source.Equals(destination) == false)
             {
+                int distance;
                 try
                 {
-                    int distance = GoogleDirectionApiClient.RequestDistance(source.Name, destination.Name);
+                    distance = GoogleDirectionApiClient.RequestDistance(source.Name, destination.Name);
+
+                    //kontrolni ispis
+                    Console.WriteLine("\nUdaljenost: " + source.Name + "->" + destination.Name + "=" + distance);
+
                     source.AddDistance(destination, distance);
                 }
                 catch (Exception e)
