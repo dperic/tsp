@@ -7,3 +7,6 @@ c:\users\student5\documents\visual studio 2015\Projects\lovelmimica\traveling-sa
 C:\Users\student5\Documents\lovel-mimica\git-repositories\tsp\traveling-salesman-problem\traveling-salesman-problem\bin\Debug\traveling-salesman-problem.exe.config
 C:\Users\student5\Documents\lovel-mimica\git-repositories\tsp\traveling-salesman-problem\traveling-salesman-problem\obj\Debug\traveling-salesman-problem.exe
 C:\Users\student5\Documents\lovel-mimica\git-repositories\tsp\traveling-salesman-problem\traveling-salesman-problem\obj\Debug\traveling-salesman-problem.pdb
+C:\Users\student6\Source\Repos\tsp\traveling-salesman-problem\traveling-salesman-problem\bin\Debug\traveling-salesman-problem.exe.config
+C:\Users\student6\Source\Repos\tsp\traveling-salesman-problem\traveling-salesman-problem\obj\Debug\traveling-salesman-problem.exe
+C:\Users\student6\Source\Repos\tsp\traveling-salesman-problem\traveling-salesman-problem\obj\Debug\traveling-salesman-problem.pdb
