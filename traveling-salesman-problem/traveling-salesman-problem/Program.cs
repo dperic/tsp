@@ -10,11 +10,12 @@ namespace traveling_salesman_problem
     {
         static void Main(string[] args)
         {
-            //ucitaj adrese
-            Trip.getInstance().Initialize(new Address("nesto"), "addresses.txt", 1);
-            //set adres distances
-
+            //ucitaj adrese i pripadajuce međusobne udaljenosti
+            Address origin = new Address("Karlovac");
+            Trip.GetInstance().Initialize(origin, "addresses.txt", 1);
             //organiziraj put
+
+
             Console.ReadKey();
         }
     }
