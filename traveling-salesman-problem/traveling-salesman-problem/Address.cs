@@ -11,6 +11,7 @@ namespace traveling_salesman_problem
         {
             Name = name;
             distancesTable = new Hashtable();
+            distancesTable.Add(this, 0);
         }
 
         public String Name { get; }

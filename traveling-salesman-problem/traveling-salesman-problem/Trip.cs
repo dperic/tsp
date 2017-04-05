@@ -52,16 +52,16 @@ namespace traveling_salesman_problem
         }
         private void SetAddressDistances()
         {
-            //TODO: implementiraj
-            Console.WriteLine("SetAddressDistances()");
-            List<Address> destinationsTempList = this.DestinationList;
+            List<Address> destinationsTempList = new List<Address>(DestinationList);
+                
             //setaj udaljenost izmeju ishodista i svih adresa
             foreach(Address a in destinationsTempList)
             {
                 AddDistance(Origin, a);
+                AddDistance(a, Origin);
             }
             //setaj međusobne udaljenosti između svih adresa međusobno
-            destinationsTempList = DestinationList;
+            destinationsTempList = new List<Address>(DestinationList);
             foreach(Address firstAddress  in destinationsTempList)
             {
                 foreach(Address secondAddress in destinationsTempList)

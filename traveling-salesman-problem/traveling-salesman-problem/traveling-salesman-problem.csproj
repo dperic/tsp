@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Address.cs" />
     <Compile Include="Algorithm.cs" />
-    <Compile Include="Geolocation.cs" />
     <Compile Include="GoogleApiClient.cs" />
     <Compile Include="HasDistance.cs" />
     <Compile Include="Program.cs" />

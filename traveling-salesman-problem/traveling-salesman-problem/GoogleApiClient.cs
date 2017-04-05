@@ -24,6 +24,7 @@ namespace traveling_salesman_problem
             };
             DistanceMatrixResponse response = GoogleMapsApi.GoogleMaps.DistanceMatrix.Query(request);
             int distance = response.Rows.ElementAt(0).Elements.ElementAt(0).Distance.Value;
+
             return distance;
         }
         

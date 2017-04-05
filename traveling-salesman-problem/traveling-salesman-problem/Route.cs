@@ -48,9 +48,21 @@ namespace traveling_salesman_problem
                     priorDestinationIndex = i - 1;
                 }
                 Address priorDestination = DestinationList.ElementAt(priorDestinationIndex);
-                totalDistance += currentDestination.GetDistance(priorDestination.Name);
+                totalDistance += currentDestination.GetDistance(priorDestination);
             }
             return totalDistance;
+        }
+
+        public override string ToString()
+        {
+            string s = "\nRoute: ";
+            foreach(Address a in DestinationList)
+            {
+                s += a.Name + "->";
+            }
+            s += DestinationList.ElementAt(0).Name;
+            s += ", distance= " + GetDistance(); 
+            return s;
         }
     }
 }

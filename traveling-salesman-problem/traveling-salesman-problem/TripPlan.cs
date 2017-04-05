@@ -32,5 +32,16 @@ namespace traveling_salesman_problem
             }
             return totalDistance;
         }
+
+        public override string ToString()
+        {
+           string s = "\nTripPlan:";
+           foreach(Route r in this.RouteList)
+            {
+                s += r.ToString();
+            }
+            s += "\nTotal distance= " + GetDistance();
+            return s;
+        }
     }
 }

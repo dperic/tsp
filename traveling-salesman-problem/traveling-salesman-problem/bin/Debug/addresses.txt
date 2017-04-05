@@ -1,1 +1,1 @@
-split;varazdin;zagreb;osijek;zadar;knin;
+split;varazdin;zagreb;osijek;zadar;knin;brcko;vukovar;mimice;verona;
