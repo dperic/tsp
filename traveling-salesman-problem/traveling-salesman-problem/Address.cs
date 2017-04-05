@@ -1,30 +1,42 @@
 ﻿using System;
+using System.Collections;
 
 namespace traveling_salesman_problem
 {
     class Address
     {
-        private Geolocation location;
+        private Hashtable distancesTable;
+
         public Address(string name)
         {
             Name = name;
-            this.location = GoogleDirectionApiClient.RequestDistance(name);
+            distancesTable = new Hashtable();
         }
 
         public String Name { get; }
-        public float Latitude
+        
+        public int GetDistance(Address address)
         {
-            get
-            {
-                return this.location.Latitude;
-            }
+            if (distancesTable.Contains(address)) return (int)distancesTable[address];
+            else throw new Exception("No address name in distancesTable");
         }
-        public float Longitude
+        public void AddDistance(Address address,  int distance)
         {
-            get
+            if(distancesTable.ContainsKey(address))
             {
-                return this.location.Longitude;
+                distancesTable.Remove(address);
             }
+            distancesTable.Add(address, distance);
         }
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType().Equals(this.GetType()))
+            {
+                Address secondAddress = (Address)obj;
+                if (this.Name.Equals(secondAddress.Name)) return true;
+            }
+            return false;
+        }
+
     }
 }

@@ -12,22 +12,23 @@ namespace traveling_salesman_problem
         private char addressSeparator = ';';
 
         private Trip(){
-            this.AddressList = new List<Address>();
+            this.DestinationList = new List<Address>();
         }
 
-        public static Trip getInstance()
+        public static Trip GetInstance()
         {
             if (instance == null) instance = new Trip();
             return instance;
         }
 
-        public Address Start { get; set; }
-        public List<Address> AddressList { get; set; }
+        public Address Origin { get; set; }
+        public List<Address> DestinationList { get; set; }
         public int VehicleCount { get; set; }
+        public TripPlan Plan { get; set; }
 
         public void Initialize(Address startAddress, string addressFile, int vehicleCount)
         {
-            this.Start = startAddress;
+            this.Origin = startAddress;
             LoadAddresses(addressFile);
             SetAddressDistances();
             this.VehicleCount = vehicleCount;
@@ -35,8 +36,6 @@ namespace traveling_salesman_problem
 
         private void LoadAddresses(string path)
         {
-            //TODO: implementiraj
-            Console.WriteLine("LoadAddresses()");
             string addressesRaw = TxtFileHelper.LoadText(path);
             string[] addressesString = addressesRaw.Split(this.addressSeparator);
 
@@ -47,18 +46,45 @@ namespace traveling_salesman_problem
                     //kreiraj objekt klase Address sa paremetrom naziva
                     Address a = new Address(address.Trim());
                     //dodaj novokreirani objekt u listu adresa
-                    this.AddressList.Add(a);
+                    if(DestinationList.Contains(a) == false) this.DestinationList.Add(a);
                 }
             }
-            Console.WriteLine(this.AddressList.ToString());
-
         }
         private void SetAddressDistances()
         {
             //TODO: implementiraj
             Console.WriteLine("SetAddressDistances()");
+            List<Address> destinationsTempList = this.DestinationList;
+            //setaj udaljenost izmeju ishodista i svih adresa
+            foreach(Address a in destinationsTempList)
+            {
+                AddDistance(Origin, a);
+            }
+            //setaj međusobne udaljenosti između svih adresa međusobno
+            destinationsTempList = DestinationList;
+            foreach(Address firstAddress  in destinationsTempList)
+            {
+                foreach(Address secondAddress in destinationsTempList)
+                {
+                    AddDistance(firstAddress, secondAddress);
+                }
+            }
         }
-    
-
+        private void AddDistance(Address source, Address destination)
+        {
+            if(source.Equals(destination) == false)
+            {
+                try
+                {
+                    int distance = GoogleDirectionApiClient.RequestDistance(source.Name, destination.Name);
+                    source.AddDistance(destination, distance);
+                }
+                catch (Exception e)
+                {
+                    //TODO: ukloni adresu koja je stvarala problem (npr onu koja ne postoji ili je krivo napisana)
+                    throw e;
+                }
+            }else source.AddDistance(destination, 0);
+        }
     }
 }

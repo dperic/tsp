@@ -8,6 +8,6 @@ namespace traveling_salesman_problem
 {
     interface HasDistance
     {
-        float GetDistance();
+        int GetDistance();
     }
 }

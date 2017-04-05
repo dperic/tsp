@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GoogleMapsApi.Entities.DistanceMatrix.Request;
+using GoogleMapsApi.Entities.DistanceMatrix.Response;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -13,17 +15,16 @@ namespace traveling_salesman_problem
         private string api = "https://maps.googleapis.com/maps/api/directions/json";
         private string options = "?origin=Split&destination=Zagreb&key=AIzaSyBQB_fNYxPbyWHYNHpooPzllIqmOPJzVWc";
         
-        public static float RequestDistance(string source, string destination)
+        public static int RequestDistance(string origin, string destination) 
         {
-            return 10;
-            
-        }
-
-        private string HttpGet(string uri)
-        {
-            WebClient client = new WebClient();
-
-            return null;
+            DistanceMatrixRequest request = new DistanceMatrixRequest()
+            {
+                Origins = new string[] {origin},
+                Destinations = new string[] {destination}
+            };
+            DistanceMatrixResponse response = GoogleMapsApi.GoogleMaps.DistanceMatrix.Query(request);
+            int distance = response.Rows.ElementAt(0).Elements.ElementAt(0).Distance.Value;
+            return distance;
         }
         
     }
