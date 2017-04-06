@@ -22,7 +22,6 @@ namespace traveling_salesman_problem
                 Origins = new string[] { origin },
                 Destinations = new string[] { destination },
                 ApiKey = apiKey
-
             };
             DistanceMatrixResponse response = GoogleMapsApi.GoogleMaps.DistanceMatrix.Query(request);
             int distance = response.Rows.ElementAt(0).Elements.ElementAt(0).Distance.Value;

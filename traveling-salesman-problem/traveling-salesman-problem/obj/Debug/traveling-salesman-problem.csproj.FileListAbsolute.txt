@@ -11,3 +11,4 @@ C:\Users\student5\Documents\lovel-mimica\git-repositories\tsp\traveling-salesman
 C:\Users\student5\Documents\lovel-mimica\git-repositories\tsp\traveling-salesman-problem\traveling-salesman-problem\bin\Debug\GoogleMapsApi.pdb
 C:\Users\student5\Documents\lovel-mimica\git-repositories\tsp\traveling-salesman-problem\traveling-salesman-problem\obj\Debug\traveling-salesman-problem.exe
 C:\Users\student5\Documents\lovel-mimica\git-repositories\tsp\traveling-salesman-problem\traveling-salesman-problem\obj\Debug\traveling-salesman-problem.pdb
+C:\Users\student5\Documents\lovel-mimica\git-repositories\tsp\traveling-salesman-problem\traveling-salesman-problem\obj\Debug\traveling-salesman-problem.csprojResolveAssemblyReference.cache

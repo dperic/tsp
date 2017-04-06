@@ -79,9 +79,6 @@ namespace traveling_salesman_problem
                 {
                     distance = GoogleDirectionApiClient.RequestDistance(source.Name, destination.Name);
 
-                    //kontrolni ispis
-                    Console.WriteLine("\nUdaljenost: " + source.Name + "->" + destination.Name + "=" + distance);
-
                     source.AddDistance(destination, distance);
                 }
                 catch (Exception e)
