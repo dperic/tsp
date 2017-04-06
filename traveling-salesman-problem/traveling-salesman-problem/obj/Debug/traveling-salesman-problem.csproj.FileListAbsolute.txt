@@ -11,3 +11,10 @@ C:\Users\student5\Documents\lovel-mimica\git-repositories\tsp\traveling-salesman
 C:\Users\student5\Documents\lovel-mimica\git-repositories\tsp\traveling-salesman-problem\traveling-salesman-problem\bin\Debug\GoogleMapsApi.pdb
 C:\Users\student5\Documents\lovel-mimica\git-repositories\tsp\traveling-salesman-problem\traveling-salesman-problem\obj\Debug\traveling-salesman-problem.exe
 C:\Users\student5\Documents\lovel-mimica\git-repositories\tsp\traveling-salesman-problem\traveling-salesman-problem\obj\Debug\traveling-salesman-problem.pdb
+C:\Users\student6\Source\Repos\tsp\traveling-salesman-problem\traveling-salesman-problem\bin\Debug\traveling-salesman-problem.exe.config
+C:\Users\student6\Source\Repos\tsp\traveling-salesman-problem\traveling-salesman-problem\obj\Debug\traveling-salesman-problem.exe
+C:\Users\student6\Source\Repos\tsp\traveling-salesman-problem\traveling-salesman-problem\obj\Debug\traveling-salesman-problem.pdb
+C:\Users\student6\Source\Repos\tsp\traveling-salesman-problem\traveling-salesman-problem\bin\Debug\traveling-salesman-problem.exe
+C:\Users\student6\Source\Repos\tsp\traveling-salesman-problem\traveling-salesman-problem\bin\Debug\traveling-salesman-problem.pdb
+C:\Users\student6\Source\Repos\tsp\traveling-salesman-problem\traveling-salesman-problem\bin\Debug\GoogleMapsApi.pdb
+C:\Users\student6\Source\Repos\tsp\traveling-salesman-problem\traveling-salesman-problem\obj\Debug\traveling-salesman-problem.csprojResolveAssemblyReference.cache
